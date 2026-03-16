@@ -1,0 +1,10 @@
+CREATE SEQUENCE IF NOT EXISTS task_seq
+    INCREMENT 1
+    START 1;
+
+CREATE TABLE IF NOT EXISTS task
+(
+    id   BIGINT      NOT NULL DEFAULT nextval('task_seq') PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    type VARCHAR(255) NOT NULL
+);
